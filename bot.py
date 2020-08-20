@@ -10,7 +10,7 @@ sched = BlockingScheduler()
 API_KEY = os.getenv('API_KEY')
 # print(API_KEY)
 
-@sched.scheduled_job('interval', minutes=1)
+@sched.scheduled_job('interval', minutes=20)
 def send_req():
 	r.get(API_KEY)
 	return
